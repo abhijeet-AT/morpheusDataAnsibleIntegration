@@ -1,0 +1,6 @@
+vCenter:
+  server: "atvies992qwsrv.admingate.local"
+  dataCenter: "DCN-DCS"
+  #cluster: "shared-ansible-test"
+  #datastore: "Shared-Ansible-DCS-UNITY-D04A-01-Silver"
+  #vmFolder: "/vm/shared-ansible-test/Ansible"
