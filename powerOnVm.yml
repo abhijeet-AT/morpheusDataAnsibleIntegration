@@ -1,0 +1,22 @@
+---
+#author:  Abhijeet Janwalkar
+#date:    07-09-2022
+#version:   0.1
+#description: Playbook to PowerOn a  VM 
+#Changelog:
+# 07-09-2022 - Initial code to Playbook to PowerOn a  VM 
+
+- name: Poweron a  VM by running role poweronVcenterVm
+  hosts: localhost
+  gather_facts: false
+  vars:
+    vmName: ACPtestw2k19
+    vCenter_user: adm10rr5@admingate.local
+    vCenter:
+      server: "atvies992qwsrv.admingate.local"
+      dataCenter: "DCN-DCS"
+
+  tasks:
+  - name: "Running Role: poweronVcenterVm to PowerOn '{{ vmName }}'"
+    include_role:
+      name: poweronVcenterVm
