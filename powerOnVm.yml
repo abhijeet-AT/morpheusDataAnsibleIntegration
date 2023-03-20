@@ -12,6 +12,7 @@
   vars:
     vmName: ACPtestw2k19
     vCenter_user: adm10rr5@admingate.local
+    vCenter_user_pass: <%= customOptions.Password %>
     vCenter:
       server: "atvies992qwsrv.admingate.local"
       dataCenter: "DCN-DCS"
