@@ -14,8 +14,8 @@
     vCenter_user: "{{ lookup('cypher','secret=password/atvies992qwsrv_user_name') }}"
     vCenter_user_pass: "{{ lookup('cypher','secret=password/atvies992qwsrv_user_pass') }}"
     vCenter:
-      server: "atvies992qwsrv.admingate.local"
-      dataCenter: "DCN-DCS"
+      server: "{{ lookup('cypher','secret=secret/vcenterShared') }}" 
+      dataCenter: "{{ lookup('cypher','secret=secret/vcenterSharedDataCenter') }}" 
 
   tasks:
   - name: "Running Role: poweronVcenterVm to PowerOn '{{ vmName }}'"
