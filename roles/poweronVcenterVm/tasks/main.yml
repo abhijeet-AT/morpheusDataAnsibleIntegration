@@ -15,7 +15,7 @@
 
 - name: wait 1 minute to boot VM  
   ansible.builtin.pause:
-    seconds: 60
+    seconds: 20
   delegate_to: localhost
 
 - name: Wait for VMware tools to become available after VM Powered on.
