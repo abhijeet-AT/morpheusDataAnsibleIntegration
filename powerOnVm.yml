@@ -10,9 +10,9 @@
   hosts: localhost
   gather_facts: false
   vars:
-    vmName: ACPtestw2k19
-    vCenter_user: adm10rr5@admingate.local
-    vCenter_user_pass: "{{ morpheus['customOptions']['Password'] }}"
+    vmName: "{{ morpheus['customOptions']['VMName'] }}"
+    vCenter_user: "{{ lookup('cypher','secret=password/password/atvies992qwsrv_user_name') }}"
+    vCenter_user_pass: "{{ lookup('cypher','secret=password/password/atvies992qwsrv_user_pass') }}"
     vCenter:
       server: "atvies992qwsrv.admingate.local"
       dataCenter: "DCN-DCS"
