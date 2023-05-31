@@ -2,7 +2,6 @@ localhost
 
 [windows]
 
-100.64.3.81
 
 [windows:vars]
 ansible_connection=winrm
